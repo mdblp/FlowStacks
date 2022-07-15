@@ -29,7 +29,18 @@
 		52C5CCDF286EE92B0075ABA7 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5CCDD286EE92B0075ABA7 /* Deeplink.swift */; };
 		77F136ED282E45E0008A6A02 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F136EC282E45DF008A6A02 /* ParentCoordinator.swift */; };
 		77F136EE282E45E0008A6A02 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F136EC282E45DF008A6A02 /* ParentCoordinator.swift */; };
+		DFCFD630288195A2006D8EDB /* FlowStacksAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCFD62E288195A2006D8EDB /* FlowStacksAppUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFCFD62828819577006D8EDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5241BF2726AA1D3A002D6892 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5241BF3226AA1D3B002D6892;
+			remoteInfo = "FlowStacksApp (iOS)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5241BF3326AA1D3B002D6892 /* FlowStacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowStacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,8 @@
 		52C5CCDB286E5D780075ABA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52C5CCDD286EE92B0075ABA7 /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
 		77F136EC282E45DF008A6A02 /* ParentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinator.swift; sourceTree = "<group>"; };
+		DFCFD62228819577006D8EDB /* FlowStacksAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowStacksAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFCFD62E288195A2006D8EDB /* FlowStacksAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowStacksAppUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFCFD61F28819577006D8EDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +93,7 @@
 			children = (
 				526D9F7A26AF6BE900B6B882 /*  */,
 				526D9F1B26AF661F00B6B882 /* FlowStacksApp */,
+				DFCFD62328819577006D8EDB /* FlowStacksAppUITests */,
 				5241BF3426AA1D3B002D6892 /* Products */,
 				5241BF6D26AA1E8A002D6892 /* Frameworks */,
 			);
@@ -83,6 +104,7 @@
 			children = (
 				5241BF3326AA1D3B002D6892 /* FlowStacksApp.app */,
 				5241BF3926AA1D3B002D6892 /* FlowStacksApp.app */,
+				DFCFD62228819577006D8EDB /* FlowStacksAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +138,14 @@
 				52C5CCDD286EE92B0075ABA7 /* Deeplink.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		DFCFD62328819577006D8EDB /* FlowStacksAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DFCFD62E288195A2006D8EDB /* FlowStacksAppUITests.swift */,
+			);
+			path = FlowStacksAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +193,24 @@
 			productReference = 5241BF3926AA1D3B002D6892 /* FlowStacksApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DFCFD62128819577006D8EDB /* FlowStacksAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFCFD62C28819577006D8EDB /* Build configuration list for PBXNativeTarget "FlowStacksAppUITests" */;
+			buildPhases = (
+				DFCFD61E28819577006D8EDB /* Sources */,
+				DFCFD61F28819577006D8EDB /* Frameworks */,
+				DFCFD62028819577006D8EDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFCFD62928819577006D8EDB /* PBXTargetDependency */,
+			);
+			name = FlowStacksAppUITests;
+			productName = FlowStacksAppUITests;
+			productReference = DFCFD62228819577006D8EDB /* FlowStacksAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					5241BF3226AA1D3B002D6892 = {
@@ -178,6 +226,11 @@
 					};
 					5241BF3826AA1D3B002D6892 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					DFCFD62128819577006D8EDB = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+						TestTargetID = 5241BF3226AA1D3B002D6892;
 					};
 				};
 			};
@@ -199,6 +252,7 @@
 			targets = (
 				5241BF3226AA1D3B002D6892 /* FlowStacksApp (iOS) */,
 				5241BF3826AA1D3B002D6892 /* FlowStacksApp (macOS) */,
+				DFCFD62128819577006D8EDB /* FlowStacksAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +273,13 @@
 			files = (
 				526D9F2526AF661F00B6B882 /* Assets.xcassets in Resources */,
 				526D9F7C26AF6C1700B6B882 /*  in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFCFD62028819577006D8EDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +314,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFCFD61E28819577006D8EDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFCFD630288195A2006D8EDB /* FlowStacksAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFCFD62928819577006D8EDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5241BF3226AA1D3B002D6892 /* FlowStacksApp (iOS) */;
+			targetProxy = DFCFD62828819577006D8EDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5241BF4026AA1D3B002D6892 /* Debug */ = {
@@ -490,6 +567,58 @@
 			};
 			name = Release;
 		};
+		DFCFD62A28819577006D8EDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.johnpatrickmorgan.FlowStacksAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FlowStacksApp (iOS)";
+			};
+			name = Debug;
+		};
+		DFCFD62B28819577006D8EDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.johnpatrickmorgan.FlowStacksAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FlowStacksApp (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +645,15 @@
 			buildConfigurations = (
 				5241BF4626AA1D3B002D6892 /* Debug */,
 				5241BF4726AA1D3B002D6892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFCFD62C28819577006D8EDB /* Build configuration list for PBXNativeTarget "FlowStacksAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFCFD62A28819577006D8EDB /* Debug */,
+				DFCFD62B28819577006D8EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
