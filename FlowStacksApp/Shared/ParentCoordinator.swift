@@ -113,6 +113,7 @@ struct ChildFlowSecondView: View {
       Text(title).font(.headline).padding()
       Button("Go back to start of flow", action: goBackToCurrentFlowRoot).padding()
       Button("Close Flow", action: closeFlow)
+        .accessibilityIdentifier("ChildFlowSecondView.closeButton")
     }
   }
 }
@@ -128,6 +129,7 @@ struct ChildFlowFirstView: View {
       Text(title).font(.headline).padding()
       Button("Go to flow's second view", action: goToFlowsSecondStep).padding()
       Button("Close Flow", action: closeFlow)
+        .accessibilityIdentifier("ChildFlowFirstView.closeButton")
     }
   }
 }
