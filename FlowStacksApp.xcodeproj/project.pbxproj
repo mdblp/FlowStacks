@@ -30,6 +30,7 @@
 		77F136ED282E45E0008A6A02 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F136EC282E45DF008A6A02 /* ParentCoordinator.swift */; };
 		77F136EE282E45E0008A6A02 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F136EC282E45DF008A6A02 /* ParentCoordinator.swift */; };
 		DF9E254328990D2E0001A822 /* ParentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9E254228990D2E0001A822 /* ParentUITests.swift */; };
+		DF9E25452899471D0001A822 /* UITestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9E25442899471D0001A822 /* UITestsHelpers.swift */; };
 		DFCFD630288195A2006D8EDB /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCFD62E288195A2006D8EDB /* AppUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		52C5CCDD286EE92B0075ABA7 /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
 		77F136EC282E45DF008A6A02 /* ParentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinator.swift; sourceTree = "<group>"; };
 		DF9E254228990D2E0001A822 /* ParentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentUITests.swift; sourceTree = "<group>"; };
+		DF9E25442899471D0001A822 /* UITestsHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsHelpers.swift; sourceTree = "<group>"; };
 		DFCFD62228819577006D8EDB /* FlowStacksAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowStacksAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCFD62E288195A2006D8EDB /* AppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			children = (
 				DFCFD62E288195A2006D8EDB /* AppUITests.swift */,
 				DF9E254228990D2E0001A822 /* ParentUITests.swift */,
+				DF9E25442899471D0001A822 /* UITestsHelpers.swift */,
 			);
 			path = FlowStacksAppUITests;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFCFD630288195A2006D8EDB /* AppUITests.swift in Sources */,
+				DF9E25452899471D0001A822 /* UITestsHelpers.swift in Sources */,
 				DF9E254328990D2E0001A822 /* ParentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,8 +11,9 @@ import XCTest
 struct ParentRootPage {
     let app: XCUIApplication
 
-    var isOnThisPage: Bool {
-        flow1Button.exists && flow2Button.exists
+    func waitIsOnThisPage(timeout: TimeInterval) -> Bool {
+        // Hittable only if the modal is foremost
+        flow1Button.waitForHittable(timeout: timeout)
     }
 
     var flow1Button: XCUIElement {
@@ -37,7 +38,8 @@ struct Flow1Page {
         app.staticTexts["Flow 1: Flow's First Step"]
     }
     var isOnThisPage: Bool {
-        titleLabel.exists
+        // Hittable only if the modal is foremost
+        closeButton.exists && closeButton.isHittable
     }
 
     var flow2Button: XCUIElement {
@@ -62,7 +64,8 @@ struct Flow2Page {
         app.staticTexts["Flow 1: Flow's Second Step"]
     }
     var isOnThisPage: Bool {
-        titleLabel.exists
+        // Hittable only if the modal is foremost
+        closeButton.exists && closeButton.isHittable
     }
 
     var backButton: XCUIElement {
@@ -102,7 +105,7 @@ class ParentUITests: XCTestCase {
         closeButton.tap()
 
         // Check that we're back on the Parent page
-        XCTAssertTrue(parentPage.isOnThisPage)
+        XCTAssertTrue(parentPage.waitIsOnThisPage(timeout: 2.0))
     }
 
     /// Push two screens "over", then go back to the root
@@ -122,6 +125,6 @@ class ParentUITests: XCTestCase {
         closeButton.tap()
 
         // Check that we're back to the root of the tab
-        XCTAssertTrue(parentPage.isOnThisPage)
+        XCTAssertTrue(parentPage.waitIsOnThisPage(timeout: 2.0))
     }
 }
