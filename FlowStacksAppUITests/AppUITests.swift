@@ -28,6 +28,11 @@ struct AppPage {
         app.tabBars.buttons["Numbers"]
     }
 
+    func goToNumbersTab() -> NumbersPage {
+        numbersTab.tap()
+        return NumbersPage(app: app, pageNumber: 0)
+    }
+
     var VMsTab: XCUIElement {
         app.tabBars.buttons["VMs"]
     }

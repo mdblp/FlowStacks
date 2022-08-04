@@ -91,9 +91,13 @@ struct NumberView: View {
   var body: some View {
     VStack(spacing: 8) {
       Stepper("\(number)", value: $number)
+        .accessibilityIdentifier("Stepper\(number)")
       Button("Present Double (cover)") { presentDoubleCover(number) }
+        .accessibilityIdentifier("CoverButton\(number)")
       Button("Present Double (sheet)") { presentDoubleSheet(number) }
+        .accessibilityIdentifier("SheetButton\(number)")
       Button("Push next") { pushNext(number) }
+        .accessibilityIdentifier("PushButton\(number)")
       if let goRandom = goRandom {
         Button("Go random", action: goRandom)
       }
