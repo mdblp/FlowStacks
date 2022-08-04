@@ -39,7 +39,10 @@ struct NumbersPage {
     }
 
     var decrementButton: XCUIElement {
-        app.buttons["Decrement"]
+        stepper
+            .descendants(matching: .button)
+            .matching(identifier: "Decrement")
+            .firstMatch
     }
 
     func decrement() -> NumbersPage {
@@ -88,7 +91,7 @@ struct NumbersPage {
     }
 
     var rootButton: XCUIElement {
-        app.buttons["Go back to root"]
+        app.buttons["RootButton\(pageNumber)"]
     }
 
     func goBackToRoot(newPageNumber: Int) -> NumbersPage {
@@ -168,6 +171,38 @@ class NumbersUITests: XCTestCase {
 
         let pageM2 = pageM1.presentDoubleAsSheet()
         XCTAssertEqual(pageM2.stepperNumber, -2)
+    }
+
+    func testGoesBackToRootOfComplexHierarchy() {
+        let appPage = AppPage(app: app)
+        let page0 = appPage.goToNumbersTab()
+        XCTAssertEqual(page0.stepperNumber, 0)
+
+        let page1 = page0.pushIncrementing()
+        XCTAssertEqual(page1.stepperNumber, 1)
+
+        let page2 = page1.presentDoubleAsSheet()
+        XCTAssertEqual(page2.stepperNumber, 2)
+
+        let page4 = page2.presentDoubleCovering()
+        XCTAssertEqual(page4.stepperNumber, 4)
+
+        let page3 = page4.decrement()
+        XCTAssertEqual(page3.stepperNumber, 3)
+
+        let page6 = page3.presentDoubleAsSheet()
+        XCTAssertEqual(page6.stepperNumber, 6)
+
+        let page7 = page6.pushIncrementing()
+        XCTAssertEqual(page7.stepperNumber, 7)
+
+        let page14 = page7.presentDoubleAsSheet()
+        XCTAssertEqual(page14.stepperNumber, 14)
+
+        // Go back to root
+        let pageBack = page14.goBackToRoot(newPageNumber: 0)
+        XCTAssertTrue(pageBack.waitIsOnThisPage(timeout: 4.0))
+        XCTAssertEqual(pageBack.stepperNumber, 0)
     }
 }
 

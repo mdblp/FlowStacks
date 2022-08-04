@@ -105,6 +105,7 @@ struct NumberView: View {
         Button("Go back", action: goBack)
       }
       Button("Go back to root", action: goBackToRoot)
+        .accessibilityIdentifier("RootButton\(number)")
     }
     .padding()
     .navigationTitle("\(number)")
