@@ -1,10 +1,3 @@
-//
-//  ParentUITests.swift
-//  FlowStacksAppUITests
-//
-//  Created by Renaud Pradenc on 02/08/2022.
-//
-
 import XCTest
 
 /// Visual structure of the root view of the "Parent" tab

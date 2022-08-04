@@ -1,12 +1,4 @@
-//
-//  NumbersUITests.swift
-//  FlowStacksAppUITests
-//
-//  Created by Renaud Pradenc on 02/08/2022.
-//
-
 import XCTest
-
 
 /// Visual structure of the "Numbers" view
 struct NumbersPage {

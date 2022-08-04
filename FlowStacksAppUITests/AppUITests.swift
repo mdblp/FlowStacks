@@ -1,10 +1,3 @@
-//
-//  FlowStacksAppUITests.swift
-//  FlowStacksAppUITests
-//
-//  Created by Renaud Pradenc on 15/07/2022.
-//
-
 import XCTest
 
 /// Visual structure of the application

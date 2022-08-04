@@ -1,10 +1,3 @@
-//
-//  UITestsHelpers.swift
-//  FlowStacksAppUITests
-//
-//  Created by Renaud Pradenc on 02/08/2022.
-//
-
 import Foundation
 import XCTest
 
