@@ -15,7 +15,7 @@ struct NumbersPage {
     /// The number expected to be set in the stepper
     ///
     /// We have a problem identifying the view and therefore its child controls within tests.
-    /// The trick employed here is having the controls with an accessibilityIdentifier of
+    /// The trick employed here is having the controls with accessibilityIdentifier's of
     /// the form `Control\(number)`, so we can reference them.
     /// A drawback is that each time that this number changes, we must create a new
     /// `NumbersPage` with a  `pageNumber` matching the expected view's `number`.
@@ -203,17 +203,5 @@ class NumbersUITests: XCTestCase {
         let pageBack = page14.goBackToRoot(newPageNumber: 0)
         XCTAssertTrue(pageBack.waitIsOnThisPage(timeout: 4.0))
         XCTAssertEqual(pageBack.stepperNumber, 0)
-    }
-}
-
-extension XCUIElementQuery {
-    var lastMatch: XCUIElement {
-        element(boundBy: self.count-1)
-    }
-
-    func lastButton(_ identifier: String) -> XCUIElement {
-        self.descendants(matching: .button)
-            .matching(identifier: identifier)
-            .lastMatch
     }
 }
